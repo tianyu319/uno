@@ -1,0 +1,6 @@
+.DS_Store
+.openai/
+.env
+.env.*
+
+dist/works-local-preview.html

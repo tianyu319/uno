@@ -1,0 +1,55 @@
+name: Deploy Zhengzhou University portfolio
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Read the original asset snapshot
+        uses: actions/checkout@v4
+        with:
+          repository: tianyu319/tianyu319.github.io
+          ref: 6b987d5d419743d1a17aead83a8477a94b8feee6
+          path: _source
+          persist-credentials: false
+      - name: Restore missing assets without changing repository contents
+        run: |
+          python3 - <<'PYASSETS'
+          from pathlib import Path
+          import shutil
+          source = Path('_source/dist/assets')
+          for item in source.rglob('*'):
+              if not item.is_file():
+                  continue
+              dest = Path('dist/assets') / item.relative_to(source)
+              if not dest.exists():
+                  dest.parent.mkdir(parents=True, exist_ok=True)
+                  shutil.copy2(item, dest)
+          PYASSETS
+      - name: Build music library
+        run: python3 scripts/build-music-library.py
+      - name: Prepare shorter site path
+        run: |
+          mkdir -p _site/tianyu
+          cp -R dist/. _site/
+          cp -R dist/. _site/tianyu/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Publish
+        id: deployment
+        uses: actions/deploy-pages@v4

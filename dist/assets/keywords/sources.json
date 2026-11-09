@@ -1,0 +1,44 @@
+[
+  {
+    "keyword": "信息层级",
+    "image": "assets/keywords/hierarchy.webp",
+    "photographer": "Brands&People",
+    "page": "https://unsplash.com/photos/V9zInThgKa4",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "keyword": "品牌风格",
+    "image": "assets/keywords/brand.webp",
+    "photographer": "Andy Brown",
+    "page": "https://unsplash.com/photos/9bC6YPVk0Ts",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "keyword": "内容设计",
+    "image": "assets/keywords/content.webp",
+    "photographer": "Rodrigo Rodrigues | WOLF Λ R T",
+    "page": "https://unsplash.com/photos/sPeIJ0ebl8c",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "keyword": "方案优化",
+    "image": "assets/keywords/iteration.webp",
+    "photographer": "Kelly Sikkema",
+    "page": "https://unsplash.com/photos/Cg60_WXjvC4",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "keyword": "高效协作",
+    "image": "assets/keywords/teamwork.webp",
+    "photographer": "Vitaly Gariev",
+    "page": "https://unsplash.com/photos/Imk2h0pyOvo",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "keyword": "多平台设计",
+    "image": "assets/keywords/platforms.webp",
+    "photographer": "Austin Distel",
+    "page": "https://unsplash.com/photos/tLZhFRLj6nY",
+    "license": "https://unsplash.com/license"
+  }
+]
