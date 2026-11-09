@@ -6,4 +6,4 @@
 - 修改目录后运行 `python3 scripts/sync-preview.py`，同步网页与本地预览。
 - 仅在用户授权发布时更新 GitHub；明确要求本地修改时不发布。
 
-- 此目录是独立的郑州大学版本；发布目标仅为 tianyu319/uno319.github.io。不要覆盖原站 tianyu319/tianyu319.github.io。
+- 此目录是独立的郑州大学版本；发布目标仅为 tianyu319/uno。不要覆盖原站 tianyu319/tianyu319.github.io。

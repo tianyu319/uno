@@ -19,7 +19,7 @@
 
 ## 免费 GitHub Pages 托管
 
-仓库为 tianyu319/uno319.github.io，使用 GitHub Actions 部署 GitHub Pages。推送 main 分支后自动发布 dist/，同时保留根路径与 /tianyu/ 路径。网站地址：https://tianyu319.github.io/uno319.github.io/。
+仓库为 tianyu319/uno，使用 GitHub Actions 部署 GitHub Pages。推送 main 分支后自动发布 dist/，同时保留根路径与 /tianyu/ 路径。网站地址：https://tianyu319.github.io/uno/。
 
 该版本已将字体改为本地资源。不包含 Sites 内部项目配置、Git 历史、凭据或令牌。GitHub Pages 的大陆访问质量需上线后实测，不能保证所有运营商均稳定访问。
 
@@ -34,3 +34,7 @@
 仅通过GitHub仓库管理歌曲：上传音频到dist/assets/music/并提交，Pages工作流运行scripts/build-music-library.py生成歌单。需要仓库编辑权限。删除对应音频并提交即可移除歌曲。
 
 本地预览前运行python3 scripts/build-music-library.py同步内嵌歌单。HTTP/HTTPS 下的站内页面切换在独立内容层中完成，顶层播放器和音频元素持续保留，切页不重建播放器。支持分类深链接、返回首页锚点及浏览器前进后退。直接双击HTML时使用普通页面导航。
+
+## 独立副本部署
+
+本仓库发布到 https://tianyu319.github.io/uno/ 。页面、文案、作品目录与脚本独立保存；部署时从原站固定提交 6b987d5d419743d1a17aead83a8477a94b8feee6 只读补齐尚未单独上传的图片、字体和音乐。不会向 main 回写文件。后续新增到本仓库同名路径的素材优先保留。完整离线文件保存在本地同名项目目录。
