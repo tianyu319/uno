@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: tianyu319/tianyu319.github.io
-          ref: 6b987d5d419743d1a17aead83a8477a94b8feee6
+          ref: a48a85dfe11f87eacaf41a2826b40fabf1098acf
           path: _source
           persist-credentials: false
       - name: Restore missing assets without changing repository contents
